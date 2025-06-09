@@ -1,15 +1,13 @@
 function toggleSidebar() {
-    var sidebar = document.getElementById("sidebar");
-    var closeBtn = document.querySelector(".close-btn");
-    var toggleBtn = document.querySelector(".toggle-btn");
-
-    if (sidebar.style.left === "1500px" || sidebar.style.left === "") {
-        sidebar.style.left = "0px";
-        closeBtn.style.display = "block";
-        toggleBtn.style.display = "none";
-    } else {
-        sidebar.style.left = "1500px";
-        closeBtn.style.display = "none";
-        toggleBtn.style.display = "block";
-    }
+    const sidebar = document.getElementById("sidebar");
+    const closeBtn = document.querySelector(".close-btn");
+    const toggleBtn = document.querySelector(".toggle-btn");
+    
+    sidebar.classList.toggle("active");
+    const isOpen = sidebar.classList.contains("active");
+    
+    closeBtn.style.display = isOpen ? "block" : "none";
+    toggleBtn.style.display = isOpen ? "none" : "block";
+    
+    toggleBtn.setAttribute("aria-expanded", isOpen);
 }
