@@ -3,57 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Vizronix - Exploring the limitless through creative projects">
     <title>Vizronix - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-    <img src="vizronix.png" class="logo-center">
-    <button class="close-btn" onclick="toggleSidebar()">×</button>
-</header>
-        <div class="sidebar" id="sidebar">
+        <header class="main-header" aria-label="Main header">
+            <button class="toggle-btn" onclick="toggleSidebar()" aria-label="Open menu" aria-expanded="false">☰</button>
+            <img src="vizronix.png" alt="Vizronix Logo" class="logo-center">
+            <button class="close-btn" onclick="toggleSidebar()" aria-label="Close menu">×</button>
+        </header>
+        
+        <aside class="sidebar" id="sidebar" aria-label="Main navigation">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home" onclick="toggleSidebar()">Home</a></li>
+                    <li><a href="#about" onclick="toggleSidebar()">About</a></li>
+                    <li><a href="#services" onclick="toggleSidebar()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleSidebar()">Contact</a></li>
                 </ul>
             </nav>
-        </div>
+        </aside>
 
-        <div class="content">
-            <section id="home" class="hero">
-                <h2>Exploring the limitless!</h2>
+        <main class="content">
+            <section id="home" class="hero" aria-labelledby="home-heading">
+                <h2 id="home-heading">Exploring the limitless!</h2>
                 <p>Beyond the Horizon, Beyond Limits.</p>
             </section>
 
-            <section id="about">
-                <h2>About</h2>
-                <p>Vizronix is a passionated project and a community to present creativity which is based on nature and cute to inspire others.</p>
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About</h2>
+                <p>Vizronix is a passionate project and a community to present creativity which is based on nature and cute to inspire others.</p>
             </section>
 
-            <section id="services" class="hero">
-                <h2>Projects</h2>
-                <p>Added Soon!</p>
+            <section id="services" class="hero" aria-labelledby="services-heading">
+                <h2 id="services-heading">Projects</h2>
+                <p>Coming Soon!</p>
             </section>
 
-            <section id="contact">
-                <h2>Connect</h2>
-                <p>mail to vizronix@proton.me</p>
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Connect</h2>
+                <p>Email us at <a href="mailto:vizronix@proton.me">vizronix@proton.me</a></p>
             </section>
-        </div>
-        <div class="foot">
-            <footer>
-                <img src="vlogo.png" class="flogo">
-            </footer>
-            <footer>
-                <h2 class="copy">&copy; 2025 Vizronix, All right received.</h2>
-            </footer>
-        </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="foot">
+                <img src="vlogo.png" alt="Vizronix Footer Logo" class="flogo">
+                <p class="copy">&copy; 2025 Vizronix, All rights reserved.</p>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
