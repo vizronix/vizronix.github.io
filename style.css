@@ -36,19 +36,34 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 30px;
     list-style: none;
+    gap: 30px;
 }
 
 .nav-links a {
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
     opacity: 0.8;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
     opacity: 1;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 2px;
+    background: white;
+    transition: 0.4s;
 }
 
 /* HERO */
@@ -59,11 +74,11 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-logo {
     width: 300px;
-    filter: drop-shadow(0 0 40px rgba(255,255,255,0.7));
     animation: glow 3s infinite alternate;
 }
 
@@ -73,8 +88,8 @@ body {
 }
 
 .hero h1 {
-    margin-top: 20px;
     font-size: 3rem;
+    margin-top: 20px;
 }
 
 .hero p {
@@ -95,7 +110,7 @@ body {
 /* VIDEOS */
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 30px;
 }
 
@@ -109,7 +124,7 @@ body {
 .music-slider {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
     max-height: 400px;
     overflow-y: auto;
 }
@@ -122,7 +137,7 @@ body {
 /* SOCIALS */
 .social-links {
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 .social-links a {
@@ -186,7 +201,53 @@ footer a {
 }
 
 .footer-bottom {
-    margin-top: 50px;
     text-align: center;
+    margin-top: 50px;
     opacity: 0.5;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        transform: translateY(-200%);
+        transition: 0.5s;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .section {
+        padding: 80px 30px;
+    }
+
+    .hero-logo {
+        width: 200px;
+    }
+
+    .gallery-grid {
+        columns: 2;
+    }
+}
+
+/* HAMBURGER ANIMATION */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px,6px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px,-6px);
 }
