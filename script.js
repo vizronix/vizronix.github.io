@@ -1,13 +1,7 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const closeBtn = document.querySelector(".close-btn");
-    const toggleBtn = document.querySelector(".toggle-btn");
-    
-    sidebar.classList.toggle("active");
-    const isOpen = sidebar.classList.contains("active");
-    
-    closeBtn.style.display = isOpen ? "block" : "none";
-    toggleBtn.style.display = isOpen ? "none" : "block";
-    
-    toggleBtn.setAttribute("aria-expanded", isOpen);
-}
+// Navbar scroll effect
+window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".navbar");
+    nav.style.background = window.scrollY > 50 
+        ? "rgba(0,0,0,0.85)" 
+        : "rgba(0,0,0,0.6)";
+});
