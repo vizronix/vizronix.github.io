@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vizronix — Exploring the Limitless</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header id="header">
-    <div class="header-container">
-      <img src="logo.png" alt="Vizronix Logo" class="logo" />
-      <nav>
-        <a href="#youtube">YouTube</a>
-        <a href="#spotify">Spotify</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#socials">Socials</a>
-        <a href="#discord" class="cta">Join Discord</a>
-      </nav>
+<!-- BACKGROUND DECOR -->
+<div class="bg-blur blur-1"></div>
+<div class="bg-blur blur-2"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <img src="logo.png" class="logo" alt="Vizronix Logo">
+
+    <nav id="nav">
+      <a href="#youtube">YouTube</a>
+      <a href="#spotify">Spotify</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#socials">Socials</a>
+      <a href="#discord" class="nav-cta">Discord</a>
+    </nav>
+
+    <div class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <img src="text.png" alt="Vizronix" class="hero-logo" />
-    <p class="tagline">Exploring the Limitless</p>
-  </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <img src="text.png" class="hero-text" alt="Vizronix">
+  <p class="tagline">Exploring the Limitless</p>
+</section>
 
-  <!-- YOUTUBE -->
-  <section id="youtube" class="section">
-    <h2>YouTube</h2>
-    <div class="embed-grid">
-      <!-- Replace VIDEO_ID -->
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
-    </div>
-  </section>
+<!-- YOUTUBE -->
+<section id="youtube" class="section">
+  <h2>Visual Stories</h2>
+  <div class="embed-grid">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+  </div>
+</section>
 
-  <!-- SPOTIFY -->
-  <section id="spotify" class="section">
-    <h2>Spotify</h2>
-    <div class="embed-grid">
-      <!-- Replace SPOTIFY_LINK -->
-      <iframe src="https://open.spotify.com/embed/track/SPOTIFY_ID" allow="encrypted-media"></iframe>
-    </div>
-  </section>
+<!-- SPOTIFY -->
+<section id="spotify" class="section alt">
+  <h2>Soundscapes</h2>
+  <iframe class="spotify" src="https://open.spotify.com/embed/track/SPOTIFY_ID"></iframe>
+</section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="section">
-    <h2>Visual Gallery</h2>
-    <div class="gallery-grid">
-      <img src="image1.jpg" />
-      <img src="image2.jpg" />
-      <img src="image3.jpg" />
-      <img src="image4.jpg" />
-    </div>
-  </section>
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Creative Gallery</h2>
+  <div class="gallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+  </div>
+</section>
 
-  <!-- SOCIALS -->
-  <section id="socials" class="section">
-    <h2>Connect With Us</h2>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
-      <a href="#">YouTube</a>
-      <a href="#">Spotify</a>
-    </div>
-  </section>
+<!-- SOCIALS -->
+<section id="socials" class="section alt">
+  <h2>Find Vizronix</h2>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">Pinterest</a>
+    <a href="#">YouTube</a>
+    <a href="#">Spotify</a>
+  </div>
+</section>
 
-  <!-- DISCORD -->
-  <section id="discord" class="section discord">
-    <h2>Join the Vizronix Community</h2>
-    <p>A place for creators, dreamers, and explorers.</p>
-    <a href="#" class="discord-btn">Join Discord</a>
-  </section>
+<!-- DISCORD -->
+<section id="discord" class="section discord">
+  <h2>Join the Community</h2>
+  <p>Create. Explore. Share.</p>
+  <a href="#" class="discord-btn">Join Discord</a>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <img src="text.png" alt="Vizronix" class="footer-logo" />
-    <p>© 2026 Vizronix. All rights reserved.</p>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <img src="text.png" class="footer-text">
+  <p>© 2026 Vizronix — Exploring the Limitless</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
